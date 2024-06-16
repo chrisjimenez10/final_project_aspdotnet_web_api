@@ -1,0 +1,31 @@
+@final_project_aspdotnet_web_api_HostAddress = https://localhost:7215
+
+GET {{final_project_aspdotnet_web_api_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
+
+
+GET {{final_project_aspdotnet_web_api_HostAddress}}/api/todos
+
+###
+
+POST {{final_project_aspdotnet_web_api_HostAddress}}/api/todos
+Content-Type: application/json
+
+{
+  "name": "Put notes into Google Drive for Review",
+  "description": "ASAP!"
+}
+
+###
+
+PUT {{final_project_aspdotnet_web_api_HostAddress}}/api/todos/1
+Content-Type: application/json
+
+{
+  "name": "Study most of the content we used to create the web api",
+  "description": "take some time to review the whole backend process and then setup for front end"
+}
+
+###
