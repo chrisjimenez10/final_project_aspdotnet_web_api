@@ -10,7 +10,7 @@ namespace final_project_aspdotnet_web_api.Controllers
     [ApiController] //This attribute helps provide our Controllers with ability to serve HTTP API Responses
     public class TodosController : ControllerBase
     {
-        private readonly DataContext _context;
+        private DataContext _context;
 
         public TodosController(DataContext context)
         {

@@ -1,11 +1,5 @@
 @final_project_aspdotnet_web_api_HostAddress = https://localhost:7215
 
-GET {{final_project_aspdotnet_web_api_HostAddress}}/weatherforecast/
-Accept: application/json
-
-###
-
-
 GET {{final_project_aspdotnet_web_api_HostAddress}}/api/todos
 
 ###
