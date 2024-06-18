@@ -35,7 +35,21 @@ var app = builder.Build();
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
-    app.UseSwaggerUI();
+    app.UseSwaggerUI(c=>
+    {
+        c.SwaggerEndpoint("/swagger/v1/swagger.json", "finalproject API V1");
+        c.RoutePrefix = string.Empty;
+    });
+}
+else
+{
+    //Production Environment Configuration
+    app.UseSwagger();
+    app.UseSwaggerUI(c =>
+    {
+        c.SwaggerEndpoint("/swagger/v1/swagger.json", "finalproject API V1"); //Ensures that we land on Swagger UI when we publish Web API from here
+        c.RoutePrefix = string.Empty;
+    });
 }
 
 app.UseHttpsRedirection();
